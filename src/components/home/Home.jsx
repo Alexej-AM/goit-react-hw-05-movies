@@ -12,13 +12,13 @@ export const Home = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetchMoviesTrending().then(setPopular);
-    setLoading(false);
-
-  }, []);
+    fetchMoviesTrending().then(setPopular)
+    setLoading(false)
+}, []);
 
   return (
-    
+   
+
     <ListBox>
         {loading && <Loading/>}
       <ListMovie>
