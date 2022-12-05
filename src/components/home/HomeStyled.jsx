@@ -7,6 +7,7 @@ padding: 60px;
 
 export const ListMovie = styled.ul`
 display: flex;
+justify-content: center;
 flex-wrap: wrap; 
 margin: 0px auto;
 padding: 0px;

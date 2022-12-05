@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 export const ListLink = styled.ul`
   list-style: none;
+  justify-content: center;
   display: flex;
   align-items: center;
   padding-bottom: 10px;
@@ -22,7 +23,7 @@ export const Button = styled.button`
   padding: 8px 16px;
   min-width: 90px;
   border-radius: 2px;
-  background-color: #3f51b5;
+  background-color: black;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;
@@ -42,3 +43,4 @@ export const Button = styled.button`
     background-color: #303f9f;
   }
 `;
+

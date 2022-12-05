@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 
 
-export const MovieDetails = ( ) => {
+ const MovieDetails = ( ) => {
     const imgUrl =  'https://image.tmdb.org/t/p/w500';
     const [movieDetails, setMovieDetails] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -84,3 +84,4 @@ return (
 
 
 
+export default MovieDetails;

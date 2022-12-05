@@ -1,7 +1,7 @@
 import Movies from '../../components/movies';
 import { Outlet } from "react-router-dom"
 
-export const  MoviesPage = () => {
+export default function  MoviesPage () {
       return(
         <div>
          {<Movies/>}

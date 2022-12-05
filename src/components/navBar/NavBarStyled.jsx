@@ -1,7 +1,10 @@
 import styled from "@emotion/styled";
 
 export const Header = styled.header`
-margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
 margin-top: 40px;
 background-color:  #F5F3F3 ;
 max-height: 100px;
@@ -11,7 +14,7 @@ export const ButtonHome = styled.button`
   margin-right: 8px;
   padding: 8px 16px;
   border-radius: 2px;
-  background-color: #3f51b5;
+  background-color: black;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;
@@ -36,7 +39,7 @@ export const ButtonHome = styled.button`
 export const ButtonMovies = styled.button`
 padding: 8px 16px;
   border-radius: 2px;
-  background-color: #3f51b5;
+  background-color: black;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const ListMovies = styled.ul`
 display: flex;
+justify-content: center;
 flex-wrap: wrap; 
 margin: 0px auto;
 padding: 0px;
@@ -45,7 +46,7 @@ export const Button = styled.button`
   margin-right: 8px;
   padding: 8px 16px;
   border-radius: 2px;
-  background-color: #3f51b5;
+  background-color: black;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;

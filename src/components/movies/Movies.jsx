@@ -8,7 +8,7 @@ import { ListMovies, ListItem, StyledLink, ListBox, Form, Button, Input } from '
 
 
 
-export const Movies = () => {
+const Movies = () => {
 
 const location = useLocation();
 const [query, setQuery] = useState('');
@@ -81,3 +81,4 @@ return(
 )
 }
 
+export default Movies;
