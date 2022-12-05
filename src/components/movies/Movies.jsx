@@ -17,7 +17,7 @@ const [loading, setLoading] = useState(false);
 const [searchParams, setSearchParams] = useSearchParams({});
 const searchQuery = searchParams.get('movie');
 
-const handleChange = (e) => {
+const handleChange = e => {
     setQuery(e.target.value)
 }
 
@@ -30,7 +30,7 @@ const handleSubmit = e => {
 
 useEffect(() => {
     if(searchQuery){
-        setLoading(true);
+        setLoading(true)
         fetchMoviesSearchQuery(searchQuery).then(setMovies)
         .catch(error => console.log(error))
         .finally(setLoading(false))

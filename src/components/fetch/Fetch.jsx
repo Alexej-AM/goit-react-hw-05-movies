@@ -20,12 +20,13 @@ export async function fetchMoviesTrending() {
  
   export async function fetchMoviesSearchQuery(query) {
     try {
-      const response = await axios.get(`https://api.themoviedb.org/3/search/movie/?api_key=${KEY}&query=${query}`)     
-      const arrayMovies = await response.data.results;   
-      return arrayMovies; 
-      }        
-      catch(error) {
-      console.log(error)
+      const response = await axios.get(
+        `${BASE_URL}/search/movie?query=${query}&api_key=${KEY}`
+      );
+      const arrayMovies = await response.data.results;
+      return arrayMovies;
+    } catch (error) {
+      console.log(error);
     }
   }
 
