@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { fetchMoviesById } from "components/fetch/Fetch";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Button, ListItem, ListLink } from "./MovieDetailsStyled";
 import { Loading } from "components/loading/Loading";
 import { NavLink } from "react-router-dom";
@@ -15,7 +15,11 @@ import { NavLink } from "react-router-dom";
     const [loading, setLoading] = useState(false);
     const { movieId } = useParams();
     const location = useLocation();
+
+
     const backHrefLink = location.state?.from ?? '/';
+    const navigateButton = useNavigate();
+    const backButton = () => navigateButton(backHrefLink);
 
 
 
@@ -34,9 +38,9 @@ const { overview, genres, title, vote_average, poster_path } = movieDetails;
 
 return (
     <div>
-    <Link to={backHrefLink}>
-      <Button> Go back </Button>    
-    </Link>
+    {/* <Link to={backHrefLink}> */}
+      <Button onClick={backButton}> Go back </Button>    
+    {/* </Link> */}
  <div>
 
   <div>
@@ -69,10 +73,10 @@ return (
 <h2>Additional information</h2>
 <ListLink>
   <ListItem>
-     <NavLink to="cast">Cast</NavLink>
+     <NavLink to="cast" state={{ from: location.state?.from }}>Cast</NavLink>
   </ListItem>
   <ListItem> 
-    <NavLink to="reviews">Reviews</NavLink>
+    <NavLink to="reviews" state={{ from: location.state?.from }}>Reviews</NavLink>
   </ListItem> 
 </ListLink>
 </div>
